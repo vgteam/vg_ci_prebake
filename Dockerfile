@@ -18,6 +18,9 @@ RUN apt-get -q -y update && \
         uuid-runtime && \
     npm install -g junit-merge
 
+# Debug wrapdocker startup
+ENV LOG=console
+
 # Also grab all the Dockers we want in the container.
 # Depends on fetching this external file; pre-loads whatever master toil-vg wants to use.
 # We need to do docker things through wrapdocker which starts the daemon up for us.
