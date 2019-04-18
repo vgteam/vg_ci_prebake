@@ -5,12 +5,14 @@ MAINTAINER anovak@soe.ucsc.edu
 # being done, but it should make things faster if packages are already
 # installed.
 RUN apt-get -q -y update && \
+    apt-get -q -y upgrade && \
     apt-get -q -y install \
         docker.io \
         python-pip \
         python-virtualenv \
         libcurl4-gnutls-dev \
         python-dev \
+        python3-dev \
         npm \
         nodejs \
         node-gyp \
