@@ -21,6 +21,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y update && \
         uuid-runtime \
         awscli \
         jq && \
+    apt-get clean && \
     npm install -g junit-merge
 
 # We can't pre-pull any Docker images, because that would require starting up
