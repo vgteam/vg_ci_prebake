@@ -22,9 +22,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y update && \
         awscli \
         jq && \
     apt-get clean && \
-    npm install -g npm && \
-    /usr/local/bin/npm install -g junit-merge && \
-    /usr/local/bin/npm install -g txm
+    npm install -g junit-merge && \
+    npm install -g txm
 
 # We can't pre-pull any Docker images, because that would require starting up
 # all of dockerd, and it refuses to start in a non-priveleged container. This
