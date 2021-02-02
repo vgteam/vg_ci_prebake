@@ -8,16 +8,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y update && \
     DEBIAN_FRONTEND=noninteractive apt-get -q -y upgrade && \
     DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
         docker.io \
-        python-pip \
-        python-virtualenv \
+        python3-pip \
+        python3-virtualenv \
         libcurl4-gnutls-dev \
-        python-dev \
         python3-dev \
         npm \
         nodejs \
         node-gyp \
-        nodejs-dev \
-        libssl1.0-dev \
         uuid-runtime \
         awscli \
         jq && \
