@@ -7,6 +7,11 @@ MAINTAINER anovak@soe.ucsc.edu
 RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y update && \
     DEBIAN_FRONTEND=noninteractive apt-get -q -y upgrade && \
     DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
+        make git build-essential protobuf-compiler libprotoc-dev libjansson-dev libbz2-dev \
+        libncurses5-dev automake libtool jq bsdmainutils bc rs parallel npm samtools curl \
+        unzip redland-utils librdf-dev cmake pkg-config wget gtk-doc-tools raptor2-utils \
+        rasqal-utils bison flex gawk libgoogle-perftools-dev liblz4-dev liblzma-dev \
+        libcairo2-dev libpixman-1-dev libffi-dev libcairo-dev libprotobuf-dev libboost-all-dev \
         docker.io \
         python3-pip \
         python3-virtualenv \
@@ -16,8 +21,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y update && \
         nodejs \
         node-gyp \
         uuid-runtime \
-        awscli \
-        jq && \
+        awscli && \
     apt-get clean && \
     npm install -g junit-merge && \
     npm install -g txm
