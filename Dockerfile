@@ -21,7 +21,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y update && \
         nodejs \
         node-gyp \
         uuid-runtime \
-        awscli && \
+        awscli \
+        doxygen && \
     apt-get clean && \
     npm install -g junit-merge && \
     npm install -g txm
