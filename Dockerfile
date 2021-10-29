@@ -1,6 +1,10 @@
 FROM quay.io/vgteam/dind
 MAINTAINER anovak@soe.ucsc.edu
 
+# Make sure that package update and installation happens fresh every time this
+# file is touched.
+ADD prebake-build-timestamp.txt /etc/prebake-build-timestamp.txt
+
 # We basically pre-do all of vg's .gitlab-ci.yml setup. vg won't rely on this
 # being done, but it should make things faster if packages are already
 # installed.
