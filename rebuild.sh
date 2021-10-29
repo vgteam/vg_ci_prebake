@@ -7,7 +7,7 @@ git branch -D quay-rebuild || true
 git checkout -b quay-rebuild
 date > prebake-build-timestamp.txt
 git add prebake-build-timestamp.txt
-git commit -m "Update build timestamp to $(cat build-timestamp.txt)"
+git commit -m "Update build timestamp to $(cat prebake-build-timestamp.txt)"
 git push git@github.com:vgteam/vg_ci_prebake.git quay-rebuild:master
 
 
