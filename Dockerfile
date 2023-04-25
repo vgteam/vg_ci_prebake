@@ -16,7 +16,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y update && \
         unzip redland-utils librdf-dev cmake pkg-config wget gtk-doc-tools raptor2-utils \
         rasqal-utils bison flex gawk libgoogle-perftools-dev liblz4-dev liblzma-dev \
         libcairo2-dev libpixman-1-dev libffi-dev libcairo-dev libprotobuf-dev libboost-all-dev \
-        docker.io python3-pip python3-virtualenv libcurl4-gnutls-dev python-dev npm nodejs node-gyp uuid-runtime libgnutls28-dev doxygen \
+        docker.io python3-pip python3-virtualenv libcurl4-gnutls-dev python-dev npm nodejs node-gyp uuid-runtime libgnutls28-dev doxygen pybind11-dev python3-pybind11 \
         uuid-runtime \
         awscli && \
     apt-get clean && \
